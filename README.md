@@ -4,7 +4,7 @@
 
 ## 在线使用
 
-GitHub Pages 发布后，直接打开仓库主页右侧的 **Deployments** 链接即可。实验谱不会上传到服务器，解析和匹配都在访问者浏览器中完成。
+[打开 GitHub Pages 公共网站](https://mingshao2.github.io/zeolite-xrd-lab/)。实验谱不会上传到服务器，解析和匹配都在访问者浏览器中完成。
 
 ## 本地运行
 
@@ -19,7 +19,13 @@ npm run dev
 npm run build:github
 ```
 
-静态站点输出到 `docs/`。在 GitHub 仓库的 **Settings → Pages** 中选择 **Deploy from a branch**，分支选择 `main`，目录选择 `/docs`。
+静态站点输出到 `docs/`。如需通过 GitHub 网页上传发布，可继续运行：
+
+```bash
+python scripts/build-github-singlefile.py
+```
+
+脚本会把参考谱、CIF、样例、样式和程序封装成 `github-upload/index.html`。本仓库当前使用 `main` 分支根目录发布，完整可编辑源码另附于 `zeolite-xrd-lab-source.zip`。
 
 ## 科学解释边界
 
